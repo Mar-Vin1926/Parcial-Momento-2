@@ -4,11 +4,12 @@ import pandas as pd
 # Título de la aplicación
 st.title("Análisis Básico de Ventas")
 
+
 # Cargar el dataset
 try:
-    df = pd.read_csv("sales_data.csv")
+    df = pd.read_csv("static/sales_data.csv")
 except FileNotFoundError:
-    st.error("El archivo 'sales_data.csv' no se encontró. Asegúrate de que esté en el mismo directorio que la aplicación.")
+    st.error("El archivo 'sales_data.csv' no se encontró en la carpeta 'static'. Asegúrate de que esté allí.")
     st.stop()
 
 # Mostrar dataset completo
